@@ -1,5 +1,5 @@
 WITH raw_listings AS (
-    SELECT * FROM AIRBOB.RAW.RAW_LISTINGS
+    SELECT * FROM {{ source('airbob', 'listings') }}
 )
 SELECT 
     id AS listing_id,
